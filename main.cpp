@@ -2,7 +2,7 @@
  * Author:       Platonov A.A.     *
  * Group:        ПИ-231            *
  * Variant:      14                *
- * Date:         13.09.2023        *
+ * Date:         20.09.2023        *
  * Project name: Fatass Matrix Row *
  ***********************************/
 
