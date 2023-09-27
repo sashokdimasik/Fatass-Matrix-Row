@@ -1,28 +1,30 @@
-/***********************************
- * Author:       Platonov A.A.     *
- * Group:        ПИ-231            *
- * Variant:      14                *
- * Date:         20.09.2023        *
- * Project name: Fatass Matrix Row *
- ***********************************/
+/*************************************
+ * Author:       Platonov A.A.       *
+ * Group:        ПИ-231              *
+ * Variant:      14                  *
+ * Date:         20.09.2023          *
+ * Project name: Fatass Matrix Row   *
+ * cpp.sh: https://shorturl.at/cemGN *
+ *************************************/
 
 #include <iostream>
 
-int main()
-{
+using namespace std;
+
+int main() {
   int width, height;
   
-  std::cout << "Enter width & height of the matrix C: ";
-  std::cin >> width >> height;
+  cout << "Enter width & height of the matrix C: ";
+  cin >> width >> height;
   
   double **matrixC = new double*[width];
   
-  std::cout << "Enter matrix C:\n";
+  cout << "Enter matrix C:\n";
   
   for (int i = 0; i < width; i++) {
     matrixC[i] = new double[height];
     for (int j = 0; j < height; j++) {
-      std::cin >> matrixC[i][j];
+      cin >> matrixC[i][j];
     }
   }
   
@@ -40,21 +42,21 @@ int main()
     }
   }
   
-  std::cout << "Matrix C:\n";
+  cout << "Matrix C:\n";
   for (int i = 0; i < width; i++) {
     for (int j = 0; j < height; j++) {
-      std::cout << matrixC[i][j] << ' ';
+      cout << matrixC[i][j] << ' ';
     }
-    std::cout << '\n';
+    cout << '\n';
   }
   
-  std::cout << "Row with max sum:\n";
+  cout << "Row with max sum:\n";
   
   for (int i = 0; i < height; i++) {
-    std::cout << matrixC[rowMax][i] << ' ';
+    cout << matrixC[rowMax][i] << ' ';
   }
   
-  std::cout << "\nSum = " << sumMax << '\n';
+  cout << "\nSum = " << sumMax << '\n';
   
   return 0;
 }
