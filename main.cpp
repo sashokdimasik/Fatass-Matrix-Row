@@ -4,7 +4,7 @@
  * Variant:      14                  *
  * Date:         20.09.2023          *
  * Project name: Fatass Matrix Row   *
- * cpp.sh:  *
+ * cpp.sh: https://shorturl.at/cGKLR *
  *************************************/
 
 #include <iostream>
