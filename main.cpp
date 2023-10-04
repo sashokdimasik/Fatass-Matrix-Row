@@ -4,7 +4,7 @@
  * Variant:      14                  *
  * Date:         20.09.2023          *
  * Project name: Fatass Matrix Row   *
- * cpp.sh: https://shorturl.at/cemGN *
+ * cpp.sh:  *
  *************************************/
 
 #include <iostream>
@@ -21,39 +21,39 @@ int main() {
   
   cout << "Enter matrix C:\n";
   
-  for (int i = 0; i < width; i++) {
-    matrixC[i] = new double[height];
-    for (int j = 0; j < height; j++) {
-      cin >> matrixC[i][j];
+  for (int row = 0; row < height; ++row) {
+    matrixC[row] = new double[width];
+    for (int column = 0; column < width; ++column) {
+      cin >> matrixC[row][column];
     }
   }
   
   double sumCurr, sumMax = 0;
   int rowMax = 1;
   
-  for (int i = 0; i < width; i++) {
+  for (int row = 0; row < height; ++row) {
     sumCurr = 0;
-    for (int j = 0; j < height; j++) {
-      sumCurr += matrixC[i][j];
+    for (int column = 0; column < width; ++column) {
+      sumCurr += matrixC[row][column];
     }
     if (sumCurr > sumMax) {
       sumMax = sumCurr;
-      rowMax = i;
+      rowMax = row;
     }
   }
   
   cout << "Matrix C:\n";
-  for (int i = 0; i < width; i++) {
-    for (int j = 0; j < height; j++) {
-      cout << matrixC[i][j] << ' ';
+  for (int row = 0; row < height; ++row) {
+    for (int column = 0; column < width; ++column) {
+      cout << matrixC[row][column] << ' ';
     }
     cout << '\n';
   }
   
   cout << "Row with max sum:\n";
   
-  for (int i = 0; i < height; i++) {
-    cout << matrixC[rowMax][i] << ' ';
+  for (int column = 0; column < width; ++column) {
+    cout << matrixC[rowMax][column] << ' ';
   }
   
   cout << "\nSum = " << sumMax << '\n';
